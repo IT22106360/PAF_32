@@ -170,7 +170,7 @@ export function Conversation() {
                   disabled={suggestingUsers.length === 0}
                   type="text"
                   name="recipient"
-                  placeholder="Type name"
+                  placeholder="Type a name"
                   onChange={(e) => setSearch(e.target.value)}
                   value={search}
                 />
