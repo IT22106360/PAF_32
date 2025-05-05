@@ -33,7 +33,7 @@ export function Login() {
       if (error instanceof Error) {
         setErrorMessage(error.message);
       } else {
-        setErrorMessage("An unknown er occurred.");
+        setErrorMessage("An unknown error occurred.");
       }
     } finally {
       setIsLoading(false);
