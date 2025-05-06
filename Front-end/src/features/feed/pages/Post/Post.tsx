@@ -28,7 +28,7 @@ export function PostPage() {
         {posts.length > 0 && <Post setPosts={setPosts} post={posts[0]} />}
       </div>
       <div className={classes.right}>
-      <RightSidebar />
+        <RightSidebar />
       </div>
     </div>
   );
