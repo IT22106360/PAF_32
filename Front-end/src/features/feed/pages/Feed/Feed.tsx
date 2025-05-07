@@ -74,7 +74,7 @@ export function Feed() {
                   ? `${import.meta.env.VITE_API_URL}/api/v1/storage/${user?.profilePicture}`
                   : "/avatar.svg"
               }
-              //alt="change"
+              alt=""
             />
           </button>
           <Button outline onClick={() => setShowPostingModal(true)}>
