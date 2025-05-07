@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/messaging")
+@RequestMapping("/api/v1/messag")
 public class MessagingController {
     private final MessagingService messagingService;
 
