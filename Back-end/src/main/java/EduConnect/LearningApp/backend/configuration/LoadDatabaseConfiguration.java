@@ -44,7 +44,7 @@ public class LoadDatabaseConfiguration {
             createPosts(postRepository, users);
         };
     }
-
+//Load sample data
     private List<User> createUsers(UserRepository userRepository) {
         List<String> firstNames = Arrays.asList("John", "Jane", "Michael", "Emily", "David", "Sarah", "James", "Emma",
                 "William", "Olivia", "Liam", "Ava", "Noah", "Isabella", "Ethan", "Sophia", "Mason", "Mia", "Lucas",
