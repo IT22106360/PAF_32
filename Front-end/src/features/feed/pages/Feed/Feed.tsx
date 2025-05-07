@@ -22,20 +22,7 @@ export function Feed() {
   const [error, setError] = useState("");
   const ws = useWebSocket();
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      await request<IPost[]>({
-        endpoint: "/api/v1/feed",
-        onSuccess: (data) => {
-          setPosts(data);
-          setLoading(false);
-        },
-        onFailure: (error) => setError(error),
-      });
-    };
-    fetchPosts();
-  }, []);
-
+  
   useEffect(() => {
     const subscription = ws?.subscribe(`/topic/feed/${user?.id}/post`, (data) => {
       const post = JSON.parse(data.body);
