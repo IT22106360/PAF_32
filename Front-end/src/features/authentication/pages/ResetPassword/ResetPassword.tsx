@@ -91,7 +91,7 @@ export function ResetPassword() {
             }}
           >
             <p>Enter the verification code we sent to your email and your new password.</p>
-            <Input type="text" label="Verification code" key="code" name="code" />
+            <Input type="text" label="Veri code" key="code" name="code" />
             <Input
               label="New password"
               name="password"
