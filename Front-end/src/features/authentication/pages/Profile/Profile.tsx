@@ -20,7 +20,7 @@ export function Profile() {
   });
   const onSubmit = async () => {
     if (!data.firstName || !data.lastName) {
-      setError("Please fill in your first and l name.");
+      setError("Please fill in your first and last name.");
       return;
     }
     if (!data.company || !data.position) {
