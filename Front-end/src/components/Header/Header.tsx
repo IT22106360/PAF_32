@@ -270,6 +270,58 @@ export function Header() {
                   </div>
                 </NavLink>
               </li>
+              <li className={classes.learningPlan}>
+            <NavLink
+              to="/plans"
+             className={({ isActive }) => (isActive ? classes.active : "")}
+              onClick={() => {
+                setShowProfileMenu(false);
+                if (window.innerWidth <= 1080) setShowNavigationMenu(false);
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="24"
+                height="24"
+                focusable="false"
+              >
+                {/* Clipboard/list icon */}
+                <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5
+                         c-1.1 0-2 .9-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2V5
+                         a2 2 0 00-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1
+                         -1-.45-1-1 .45-1 1-1zm3 16H9v-2h6v2zm0-4H9v-2h6v2
+                        zm0-4H9V9h6v2z"/>
+              </svg>
+              <span>Plans</span>
+            </NavLink>
+          </li>
+          <li>
+                <NavLink
+                  to="/ai"
+                  className={({ isActive }) => (isActive ? classes.active : "")}
+                  onClick={() => {
+                    setShowProfileMenu(false);
+                    if (window.innerWidth <= 1080) {
+                      setShowNavigationMenu(false);
+                    }
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="24"
+                    height="24"
+                    focusable="false"
+                  >
+                    <path d="M15 9H9v6h6V9zm2-4h-1V3h-2v2H10V3H8v2H7a2 2 0 00-2 2v1H3v2h2v2H3v2h2v2H3v2h2v1a2 2 0 002 2h1v2h2v-2h2v2h2v-2h1a2 2 0 002-2v-1h2v-2h-2v-2h2v-2h-2v-2h2V8h-2V7a2 2 0 00-2-2zM7 17V7h10v10H7z" />
+                  </svg>
+
+                  <span>AI Agent</span>
+                </NavLink>
+              </li>
             </ul>
           ) : null}
 

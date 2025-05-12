@@ -20,6 +20,8 @@ import { Network } from "./features/networking/pages/Network/Network";
 import { Posts } from "./features/profile/pages/Posts/Posts";
 import { Profile } from "./features/profile/pages/Profile/Profile";
 import "./index.scss";
+import LearningPlan from "./features/learningPlan/LearningPlan";
+import Ai_feech from "./features/novel/AI_feech";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,16 @@ const router = createBrowserRouter([
             path: "posts/:id",
             element: <PostPage />,
           },
+          {
+            path: "plans/",
+            element:<LearningPlan />,
+          },
+
+           {
+            path: "ai",
+            element: <Ai_feech />,
+          },
+
           {
             path: "network",
             element: <Network />,

@@ -1,3 +1,4 @@
+
 //GG//
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -24,11 +25,7 @@ interface ICommentProps {
   editComment: (commentId: number, content: string) => Promise<void>;
 }
 
-export function Comment({
-  comment,
-  deleteComment,
-  editComment,
-}: ICommentProps) {
+export function Comment({ comment, deleteComment, editComment }: ICommentProps) {
   const navigate = useNavigate();
   const [showActions, setShowActions] = useState(false);
   const [editing, setEditing] = useState(false);
@@ -57,17 +54,12 @@ export function Comment({
                 <div className={classes.title}>
                   {comment.author.position + " at " + comment.author.company}
                 </div>
-                <TimeAgo
-                  date={comment.creationDate}
-                  edited={!!comment.updatedDate}
-                />
+                <TimeAgo date={comment.creationDate} edited={!!comment.updatedDate} />
               </div>
             </button>
             {comment.author.id == user?.id && (
               <button
-                className={`${classes.action} ${
-                  showActions ? classes.active : ""
-                }`}
+                className={`${classes.action} ${showActions ? classes.active : ""}`}
                 onClick={() => setShowActions(!showActions)}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512">
@@ -79,9 +71,7 @@ export function Comment({
             {showActions && (
               <div className={classes.actions}>
                 <button onClick={() => setEditing(true)}>Edit</button>
-                <button onClick={() => deleteComment(comment.id)}>
-                  Delete
-                </button>
+                <button onClick={() => deleteComment(comment.id)}>Delete</button>
               </div>
             )}
           </div>
