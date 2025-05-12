@@ -51,7 +51,6 @@ export function VerifyEmail() {
   };
 
   return (
-    //vertifing email
     <div className={classes.root}>
       <Box>
         <h1>Verify your Email</h1>
